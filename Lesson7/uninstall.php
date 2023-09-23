@@ -3,7 +3,7 @@
 /**
  * Trigger this file on Plugin uninstall
  *
- * @package  AlecadddPlugin
+ * @package  notes
  */
 
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
@@ -11,9 +11,9 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // Clear Database stored data
-$books = get_posts( array( 'post_type' => 'book', 'numberposts' => -1 ) );
+$notes = get_posts( array( 'post_type' => 'note', 'numberposts' => -1 ) );
 
-foreach( $books as $book ) {
+foreach( $notes as $note ) {
 	wp_delete_post( $book->ID, true );
 }
 

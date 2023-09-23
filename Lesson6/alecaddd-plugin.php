@@ -1,16 +1,16 @@
 <?php
 /**
- * @package  AlecadddPlugin
+ * @package  notes
  */
 /*
-Plugin Name: Alecaddd Plugin
-Plugin URI: http://alecaddd.com/plugin
-Description: This is my first attempt on writing a custom Plugin for this amazing tutorial series.
+Plugin Name: Notes
+Plugin URI: https://www.google.com/search?q=Notes&rlz=1C1YTUH_enIN1015IN1015&oq=Notes&aqs=chrome..69i57j69i60.4690j0j15&sourceid=chrome&ie=UTF-8
+Description: You can write notes in your Wordpress Website Backend using this Plugin.
 Version: 1.0.0
-Author: Alessandro "Alecaddd" Castellani
-Author URI: http://alecaddd.com
+Author: Kovit Nag
+Author URI: https://notespluginwordpressdeveloper.gr-site.com/
 License: GPLv2 or later
-Text Domain: alecaddd-plugin
+Text Domain: Notes
 */
 
 /*
@@ -33,7 +33,7 @@ Copyright 2005-2015 Automattic, Inc.
 
 defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 
-class AlecadddPlugin
+class notes
 {
 	function __construct() {
 		add_action( 'init', array( $this, 'custom_post_type' ) );
@@ -56,7 +56,7 @@ class AlecadddPlugin
 	}
 
 	function custom_post_type() {
-		register_post_type( 'book', ['public' => true, 'label' => 'Books'] );
+		register_post_type( 'note', ['public' => true, 'label' => 'Notes'] );
 	}
 
 	function enqueue() {

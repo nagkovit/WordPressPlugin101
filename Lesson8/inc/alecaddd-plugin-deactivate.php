@@ -1,9 +1,9 @@
 <?php
 /**
- * @package  AlecadddPlugin
+ * @package  notes
  */
 
-class AlecadddPluginDeactivate
+class notesDeactivate
 {
 	public static function deactivate() {
 		flush_rewrite_rules();
